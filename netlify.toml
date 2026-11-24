@@ -3,8 +3,3 @@
 
 [functions]
   directory = "netlify/functions"
-
-[[redirects]]
-  from = "/staff"
-  to = "/#admin"
-  status = 302
