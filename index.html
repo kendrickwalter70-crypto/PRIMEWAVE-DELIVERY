@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PRIMEWAVE DELIVERY – Global Logistics & Shipping</title>
+<meta name="description" content="PRIMEWAVE DELIVERY: air, ocean and road freight, warehousing and shipment tracking.">
+<style>
+:root{--bg:#fff;--fg:#0f1b33;--muted:#5a6785;--card:#fff;--soft:#f1f5fd;--line:#dbe3f3;--brand:#2563eb;--navy:#0b1f4d;--accent:#f59e0b;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1226;--fg:#e8eefc;--muted:#9fb0d6;--card:#111c38;--soft:#0e1932;--line:#223157;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1226;--fg:#e8eefc;--muted:#9fb0d6;--card:#111c38;--soft:#0e1932;--line:#223157;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--brand);text-decoration:none}img,svg{max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.top{background:var(--navy);color:#cfe0ff;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+.top a{color:#cfe0ff;margin-left:16px}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;color:var(--fg);font-size:18px}
+.logo b{color:var(--brand)}
+.logo i{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--brand),#06b6d4);display:grid;place-items:center}
+nav ul{list-style:none;display:flex;gap:4px;margin:0;padding:0;align-items:center}
+nav a.l{display:block;padding:8px 12px;color:var(--fg);border-radius:8px;font-weight:600;font-size:15px}
+nav a.l:hover,nav a.l.on{background:var(--soft);color:var(--brand)}
+.dd{position:relative}.dd>div{display:none;position:absolute;left:0;top:100%;min-width:190px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px;box-shadow:0 12px 30px #0002}
+.dd:hover>div,.dd:focus-within>div{display:block}
+.btn{display:inline-block;border:0;cursor:pointer;font:inherit;font-weight:700;padding:12px 22px;border-radius:10px;background:var(--brand);color:#fff;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #2563eb55;background:#1d4ed8;color:#fff}
+.btn.o{background:transparent;border:2px solid currentColor;color:#fff}.btn.o:hover{background:#fff2;box-shadow:none}
+.btn.g{background:var(--soft);color:var(--brand)}.btn.g:hover{background:var(--line);box-shadow:none;color:var(--brand)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:42px;height:42px;color:var(--fg);font-size:20px;cursor:pointer}
+@media(max-width:900px){.burger{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--card);border-bottom:1px solid var(--line);padding:10px 20px 18px}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch}.dd>div{display:block;position:static;border:0;box-shadow:none;padding:0 0 0 14px}}
+.hero{background:linear-gradient(120deg,var(--navy),#1e40af 60%,#0891b2);color:#fff;position:relative;overflow:hidden;padding:84px 0 110px}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.08;margin:0 0 16px;max-width:720px}
+.hero p{max-width:560px;font-size:18px;color:#d6e4ff}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero svg.w{position:absolute;bottom:-2px;left:0;width:200%;height:80px;animation:wave 14s linear infinite}
+@keyframes wave{to{transform:translateX(-50%)}}
+.hero .orb{position:absolute;right:-60px;top:-60px;width:380px;height:380px;border-radius:50%;background:radial-gradient(#38bdf866,transparent 70%);animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(24px)}}
+.track{margin-top:-64px;position:relative;z-index:3}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 10px 30px #0b1f4d14}
+.row{display:flex;gap:10px}.row input{flex:1}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--fg)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);border-color:transparent}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.tile{transition:transform .25s,box-shadow .25s}.tile:hover{transform:translateY(-5px);box-shadow:0 16px 36px #0b1f4d22}
+.ic{width:48px;height:48px;border-radius:12px;background:var(--soft);display:grid;place-items:center;margin-bottom:12px}
+.ic svg{width:26px;height:26px;stroke:var(--brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+section.s{padding:72px 0}section.alt{background:var(--soft)}
+h2{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:0 0 12px}h3{margin:0 0 8px}
+.eye{color:var(--brand);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-size:13px}
+.muted{color:var(--muted)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split.rev .art{order:2}
+@media(max-width:800px){.split{grid-template-columns:1fr;gap:24px}.split.rev .art{order:0}}
+.art{aspect-ratio:4/3;border-radius:20px;background:linear-gradient(135deg,var(--brand),#06b6d4);display:grid;place-items:center;position:relative;overflow:hidden}
+.art svg{width:38%;stroke:#fff;fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round;animation:float 6s ease-in-out infinite}
+.art::after{content:"";position:absolute;inset:auto -20% -40% -20%;height:70%;border-radius:50%;background:#ffffff1f}
+ul.ck{list-style:none;padding:0;margin:14px 0}ul.ck li{padding-left:28px;position:relative;margin:8px 0}
+ul.ck li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:800}
+.art.ph svg,.art.ph::after{display:none}
+.page-h{background:linear-gradient(120deg,var(--navy),#1e40af);color:#fff;padding:56px 0}.page-h h1{margin:0 0 8px;font-size:clamp(30px,5vw,46px)}.page-h p{margin:0;color:#d6e4ff;max-width:640px}
+.note{background:var(--soft);border-left:4px solid var(--accent);padding:14px 16px;border-radius:8px;font-size:14px;margin:16px 0}
+.msg{margin-top:16px;padding:14px 16px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
+.cta-band{background:linear-gradient(120deg,#1e40af,var(--brand));color:#fff;text-align:center;padding:60px 0}.cta-band p{color:#dbe7ff}
+footer{background:var(--navy);color:#b8c8ee;padding:56px 0 24px}
+footer h4{color:#fff;margin:0 0 12px}footer a{color:#b8c8ee;display:block;padding:3px 0}footer a:hover{color:#fff}
+footer .bot{border-top:1px solid #ffffff22;margin-top:32px;padding-top:18px;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.narrow{max-width:480px;margin:0 auto}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+<style id="pwcss">
+.pw{--surface:var(--card);--bg:var(--soft);--accent:#2563eb;--accent-fg:#fff;--accent-soft:#dbe7ff;--warn:#9a5d00;--warn-soft:#fbefd2;--bad:#b3261e;--bad-soft:#fbe3e1;--font-display:inherit;--font-body:inherit;font-size:15px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .pw{--accent:#60a5fa;--accent-fg:#04122b;--accent-soft:#17284f;--warn:#f0b84a;--warn-soft:#3a2d10;--bad:#ff8a80;--bad-soft:#3b1815}}
+:root[data-theme=dark] .pw{--accent:#60a5fa;--accent-fg:#04122b;--accent-soft:#17284f;--warn:#f0b84a;--warn-soft:#3a2d10;--bad:#ff8a80;--bad-soft:#3b1815}
+.pw *,.pw *::before,.pw *::after{box-sizing:border-box}
+@media (prefers-color-scheme: dark){}.pw .gut{ padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }.pw .top{ background: var(--brand); color: var(--brand-fg); }.pw .top .in{ max-width: 760px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 14px; flex-wrap: wrap; }.pw .logo{ display: flex; align-items: center; gap: 11px; background: none; border: 0; color: inherit; padding: 0; cursor: pointer; text-align: left; }.pw .logo svg{ width: 40px; height: 40px; flex: none; }.pw .logo .nm{ display: flex; flex-direction: column; line-height: 1; }.pw .logo b{ font-family: var(--font-display); font-size: 21px; font-weight: 700; letter-spacing: -.01em; }.pw .logo small{ font-size: 10px; letter-spacing: .32em; margin-top: 4px; opacity: .75; font-weight: 600; }.pw .nav{ display: flex; gap: 6px; }.pw .nav button{ font: inherit; font-size: 14px; font-weight: 500; color: inherit; background: none; border: 0; padding: 8px 12px; border-radius: 8px; cursor: pointer; opacity: .85; }.pw .nav button:hover{ background: rgba(255,255,255,.1); opacity: 1; }.pw .main{ max-width: 760px; margin: 0 auto; padding-block: 26px 40px; display: flex; flex-direction: column; gap: 20px; }.pw h1{ font-family: var(--font-display); font-weight: 700; font-size: clamp(30px, 8vw, 42px); line-height: 1.05; margin: 0 0 8px; text-wrap: balance; letter-spacing: -.01em; }.pw h2{ font-family: var(--font-display); font-size: 22px; margin: 0; }.pw h3{ font-family: var(--font-display); font-size: 16px; margin: 0 0 12px; }.pw .lead{ color: var(--muted); margin: 0; max-width: 52ch; }.pw .card{ background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }.pw .stack{ display: flex; flex-direction: column; gap: 16px; }.pw .grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }.pw .grid .full{ grid-column: 1 / -1; }@media (max-width: 480px){.pw .grid{ grid-template-columns: 1fr; }}.pw label{ display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600; min-width: 0; }.pw input,.pw select,.pw textarea{ font: inherit; font-weight: 400; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 13px; min-width: 0; width: 100%; }.pw textarea{ min-height: 90px; resize: vertical; }.pw input:focus-visible,.pw button:focus-visible,.pw select:focus-visible,.pw textarea:focus-visible{ outline: 3px solid var(--accent); outline-offset: 2px; }.pw .btn{ font: inherit; font-weight: 600; background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px; padding: 12px 18px; cursor: pointer; }.pw .btn:hover{ filter: brightness(1.07); }.pw .btn.ghost{ background: transparent; color: var(--fg); border: 1px solid var(--line); }.pw .btn.danger{ background: var(--bad-soft); color: var(--bad); }.pw .btn.small{ padding: 7px 12px; font-size: 13px; }.pw .btn:disabled{ opacity: .5; cursor: default; }.pw .bar{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }.pw .bar .grow{ flex: 1; }.pw .link{ font: inherit; font-size: 13px; background: none; border: 0; padding: 0; color: var(--muted); text-decoration: underline; cursor: pointer; }.pw .hint{ font-size: 13px; color: var(--muted); margin: 0; }.pw .err{ background: var(--bad-soft); color: var(--bad); border-radius: 10px; padding: 12px 14px; font-weight: 500; }.pw .ok{ background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 12px 14px; font-weight: 500; }.pw .warnbox{ background: var(--warn-soft); color: var(--warn); border-radius: 10px; padding: 12px 14px; font-weight: 500; }.pw .head{ display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }.pw .tn{ font-variant-numeric: tabular-nums; letter-spacing: .02em; }.pw .meaning{ margin: 14px 0 0; padding: 12px 14px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); font-size: 14px; }.pw .sub{ color: var(--muted); font-size: 13px; margin: 2px 0 0; }.pw .pill{ font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }.pw .pill.transit{ background: var(--warn-soft); color: var(--warn); }.pw .pill.bad{ background: var(--bad-soft); color: var(--bad); }.pw .steps{ list-style: none; padding: 0; margin: 22px 0 4px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }.pw .steps li{ display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; font-size: 12px; color: var(--muted); position: relative; min-width: 0; }.pw .steps li::before{ content: ""; position: absolute; top: 11px; left: -50%; width: 100%; height: 3px; background: var(--line); }.pw .steps li:first-child::before{ display: none; }.pw .steps li.done::before,.pw .steps li.now::before{ background: var(--accent); }.pw .dot{ width: 24px; height: 24px; border-radius: 50%; background: var(--surface); border: 3px solid var(--line); position: relative; z-index: 1; }.pw .done .dot{ background: var(--accent); border-color: var(--accent); }.pw .now .dot{ border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }.pw .now,.pw .done{ color: var(--fg); }.pw .now{ font-weight: 600; }.pw .tl{ list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }.pw .tl li{ display: grid; grid-template-columns: 112px 1fr; gap: 12px; font-size: 14px; }.pw .tl time{ color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }.pw .tl .where{ color: var(--muted); font-size: 13px; }@media (max-width: 420px){.pw .tl li{ grid-template-columns: 1fr; gap: 2px; }}.pw .evs{ display: flex; flex-direction: column; gap: 12px; }.pw .ev{ border: 1px solid var(--line); border-radius: 12px; padding: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }.pw .ev .full{ grid-column: 1 / -1; }.pw .ev .row{ display: flex; justify-content: flex-end; }@media (max-width: 480px){.pw .ev{ grid-template-columns: 1fr; }}.pw .meta{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; font-size: 14px; margin: 18px 0 0; }@media (max-width: 520px){.pw .meta{ grid-template-columns: 1fr 1fr; }}.pw .meta dt{ color: var(--muted); font-size: 12px; }.pw .meta dd{ margin: 2px 0 0; font-weight: 500; overflow-wrap: anywhere; }.pw .olist{ list-style: none; margin: 0; padding: 0; }.pw .olist li{ display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--line); }.pw .olist li:first-child{ border-top: 0; padding-top: 0; }.pw .olist .who{ flex: 1; min-width: 150px; }.pw .olist .who b{ font-weight: 600; }.pw .olist .who span{ display: block; color: var(--muted); font-size: 13px; }.pw .foot{ color: var(--muted); font-size: 13px; }.pw .foot button{ font: inherit; color: inherit; background: none; border: 0; padding: 6px 4px; cursor: default; }.pw .lab{ font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin: 18px 0 4px; }.pw .lab.first{ margin-top: 0; }.pw .bigv{ font-family: var(--font-display); font-size: clamp(28px, 8vw, 36px); line-height: 1.1; }.pw .statv{ font-size: 20px; font-weight: 500; }.pw .statv.warn{ color: var(--warn); }.pw .statv.bad{ color: var(--bad); }.pw .vs{ list-style: none; margin: 26px 0 0; padding: 0; }.pw .vs li{ display: flex; align-items: stretch; gap: 16px; min-height: 64px; }.pw .vs .rail{ width: 44px; flex: none; position: relative; display: flex; align-items: center; justify-content: center; }.pw .vs .rail::before{ content: ""; position: absolute; left: 50%; margin-left: -4px; width: 8px; top: 0; bottom: 0; background: var(--line); }.pw .vs li:first-child .rail::before{ top: 50%; border-radius: 8px 8px 0 0; }.pw .vs li:last-child .rail::before{ bottom: 50%; border-radius: 0 0 8px 8px; }.pw .vs .done .rail::before{ background: var(--accent); }.pw .vs .now .rail::before{ background: linear-gradient(var(--accent) 50%, var(--line) 50%); }.pw .vs .dot{ position: relative; width: 10px; height: 10px; border-radius: 50%; background: #fff; }.pw .vs .todo .dot{ background: var(--muted); opacity: .6; }.pw .vs .big{ position: relative; width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-fg); display: flex; align-items: center; justify-content: center; }.pw .vs .now{ background: var(--bg); border-radius: 44px 22px 22px 44px; }.pw .vs .txt{ display: flex; flex-direction: column; justify-content: center; gap: 2px; padding: 10px 12px 10px 0; min-width: 0; }.pw .vs .t{ font-weight: 700; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }.pw .vs .todo .t{ color: var(--muted); }.pw .vs .s{ font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }.pw .vs .s.i{ font-style: italic; font-size: 13px; }.pw .srow{ display: flex; gap: 8px; align-items: center; }.pw .srow input{ flex: 1; }.pw .olist select.qs{ width: auto; border: 0; padding: 6px 10px; font-size: 12px; font-weight: 600; cursor: pointer; }.pw .srow .btn{ flex: none; }@media (prefers-reduced-motion: no-preference){.pw .rise{ animation: rise .3s ease-out both; }@keyframes rise{ from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>Global logistics &amp; shipping</span><span><a href="#contact">Contact Us</a><a href="#track">Track</a><a href="#" id="theme">Theme</a></span></div></div>
+<header class="nav"><div class="wrap">
+<a class="logo" href="#home"><i><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M2 14c3-6 6-6 10 0s7 6 10 0"/></svg></i><span>PRIMEWAVE <b>DELIVERY</b></span></a>
+<button class="burger" id="burger" aria-label="Menu">☰</button>
+<nav id="nav"><ul id="menu"></ul></nav>
+</div></header>
+<main id="app"></main>
+<div id="pwwrap" hidden><div id="pwh"></div><section class="s"><div class="wrap"><div id="root" class="pw"></div></div></section></div>
+<footer><div class="wrap">
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+<div><h4>PRIMEWAVE DELIVERY</h4><p>Air, ocean and road freight, warehousing and shipment tracking for businesses and individuals.</p></div>
+<div><h4>Services</h4><a href="#air-freight">Air Freight</a><a href="#ocean-freight">Ocean Freight</a><a href="#road-freight">Road Freight</a><a href="#warehousing">Warehousing</a></div>
+<div><h4>Company</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#contact">Contact Us</a></div>
+<div><h4>Customers</h4><a href="#track">Track Shipment</a><a href="#quote">Request a Quote</a><a href="#login">Customer Login</a><a href="#register">Create Account</a></div>
+</div>
+<div class="bot"><span><a href="#admin" aria-label="Staff area" style="display:inline;color:inherit">©</a> 2026 PRIMEWAVE DELIVERY. All rights reserved.</span></div>
+</div></footer>
+<script type="application/json" id="state">{"settings": {"phone": "", "email": "support@primewavedelivery.com", "steps": [{"id": "1", "name": "PACKAGE RECEIVED BY PRIME WAVE"}, {"id": "2", "name": "IN TRANSIT"}, {"id": "3", "name": "OUT FOR DELIVERY"}, {"id": "4", "name": "DELIVERED"}], "labels": {"special": {"onhold": "ON HOLD", "exception": "Delivery exception", "returned": "Returned to sender"}}}, "pub": []}</script>
+<script id="app-script">
+(function () {
+  /* ---------- state ---------- */
+  var S = JSON.parse(document.getElementById("state").textContent);
+  var root = document.getElementById("root");
+  var DEF_STAGES = ["Label created", "Picked up", "In transit", "Out for delivery", "Delivered"];
+  var DEF_SPECIAL = { onhold: "On hold", exception: "Delivery exception", returned: "Returned to sender" };
+  var STAGES = DEF_STAGES.slice(), SPECIAL = {};
+  var EVENT_TEXT = ["Shipment information received", "Picked up from sender", "In transit", "Out for delivery", "Delivered"];
+  var STEPS = [], IDS = [];
+  function idx(s) { return IDS.indexOf(String(s)); }
+  function applyLabels() {
+    var l = S.settings.labels || {}, ls = l.stages || [], lp = l.special || {};
+    var st = S.settings.steps;
+    if (!st || !st.length) st = DEF_STAGES.map(function (d, i) { return { id: String(i), name: ls[i] || d }; });
+    STEPS = st; STAGES = st.map(function (s) { return s.name; }); IDS = st.map(function (s) { return s.id; });
+    SPECIAL = {}; Object.keys(DEF_SPECIAL).forEach(function (k) { SPECIAL[k] = lp[k] || DEF_SPECIAL[k]; });
+  }
+  applyLabels();
+  var DEFMEAN = {
+    "0": "We have your shipment details. The parcel has not reached us yet.",
+    "1": "Our rider or depot has collected your parcel.",
+    "2": "Your parcel is moving between our hubs toward your city.",
+    "3": "Your parcel is on a vehicle and should arrive today.",
+    "4": "Your parcel has been handed over.",
+    onhold: "Your package is on hold. Please contact us for more information.",
+    exception: "Something delayed your delivery. Check the latest update below.",
+    returned: "Your package is being returned to the sender."
+  };
+  function defMean(s) { return DEFMEAN[String(s)] || ""; }
+  var SERVICES = ["Standard", "Express", "Same-day"];
+  var view = "home", ORDERS = null, PASS = null, dirty = false, changed = {}, editing = null, draft = null;
+  var notice = null, lookupResult = "", lookupVal = "";
+  var oldPub = {};
+  S.pub.forEach(function (r) { oldPub[r.id] = r; });
+
+  /* ---------- helpers ---------- */
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function fmt(iso) {
+    var d = new Date(iso);
+    return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) + ", " + d.toLocaleTimeString("en-GB", { hour: "numeric", minute: "2-digit", hour12: true });
+  }
+  function toLocalInput(iso) { var d = new Date(iso); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 16); }
+  function validLocal(v) { return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/.test(v) && !isNaN(new Date(v).getTime()); }
+  function norm(id) { return String(id).toUpperCase().replace(/[^A-Z0-9]/g, ""); }
+  function store(k, v) { try { if (v == null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, v); } catch (e) {} }
+  function load(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
+  function newTn() {
+    var a = crypto.getRandomValues(new Uint32Array(3)), d = "";
+    for (var i = 0; i < 3; i++) d += String(a[i] % 10000).padStart(4, "0");
+    return "PW" + d.slice(0, 10);
+  }
+  var LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#12385f"/><path d="M6 16c4-6 8-6 14 0s10 6 14 0" fill="none" stroke="#2bd0f0" stroke-width="3.4" stroke-linecap="round"/><path d="M6 26c4-6 8-6 14 0s10 6 14 0" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round"/></svg>';
+
+  /* ---------- encryption (shipment details are locked in the published page) ---------- */
+  var te = new TextEncoder(), td = new TextDecoder();
+  function b64(buf) { var a = new Uint8Array(buf), s = ""; for (var i = 0; i < a.length; i++) s += String.fromCharCode(a[i]); return btoa(s); }
+  function unb64(s) { var b = atob(s), a = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) a[i] = b.charCodeAt(i); return a; }
+  async function deriveKey(secret, salt) {
+    var m = await crypto.subtle.importKey("raw", te.encode(secret), "PBKDF2", false, ["deriveKey"]);
+    return crypto.subtle.deriveKey({ name: "PBKDF2", salt: salt, iterations: 100000, hash: "SHA-256" }, m, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+  }
+  async function seal(obj, secret) {
+    var salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+    var k = await deriveKey(secret, salt);
+    var ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv: iv }, k, te.encode(JSON.stringify(obj)));
+    return { s: b64(salt), i: b64(iv), c: b64(ct) };
+  }
+  async function unseal(rec, secret) {
+    var k = await deriveKey(secret, unb64(rec.s));
+    var pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: unb64(rec.i) }, k, unb64(rec.c));
+    return JSON.parse(td.decode(pt));
+  }
+
+  /* ---------- server: saving and publishing ---------- */
+  var NEEDSETUP = false;
+  async function api(path, body) {
+    try {
+      var r = await fetch("/api/" + path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : { cache: "no-store" });
+      var j = null; try { j = await r.json(); } catch (e) {}
+      return { ok: r.ok, status: r.status, data: j || {} };
+    } catch (e) { return { ok: false, status: 0, data: {} }; }
+  }
+  async function loadPublic() {
+    var r = await api("public");
+    if (!r.ok) return;
+    NEEDSETUP = !!r.data.setup;
+    if (PASS) return;
+    if (r.data.pub) S.pub = r.data.pub;
+    if (r.data.settings) { S.settings = r.data.settings; applyLabels(); }
+  }
+  function publicOf(o) {
+    return { id: o.id, recipient: o.recipient, origin: o.origin, destination: o.destination, service: o.service, weight: o.weight, contents: o.contents, status: o.status, meaning: o.meaning, eta: o.eta, signedBy: o.signedBy, events: o.events };
+  }
+  async function saveNow() {
+    var r = await api("save", { password: PASS, orders: ORDERS, settings: S.settings });
+    return r.ok;
+  }
+  async function persist() {
+    if (await saveNow()) return;
+    notice = { kind: "err", text: "Could not save to the server. Check your connection and try again." }; render();
+  }
+  async function publishAll() {
+    notice = { kind: "warn", text: "Publishing. This can take a few seconds." }; render();
+    try {
+      if (!(await saveNow())) throw new Error("save");
+      var pub = [];
+      for (var i = 0; i < ORDERS.length; i++) { var rec = await seal(publicOf(ORDERS[i]), ORDERS[i].id); rec.id = ORDERS[i].id; pub.push(rec); }
+      var r = await api("publish", { password: PASS, pub: pub, settings: S.settings });
+      if (!r.ok) throw new Error("publish");
+      S.pub = pub; dirty = false;
+      notice = { kind: "ok", text: "Published. Customers can now see your latest shipments." };
+    } catch (e) {
+      notice = { kind: "err", text: "Could not publish. Your changes are saved, so try again." };
+    }
+    render();
+  }
+  async function changePass() {
+    readSettings();
+    var g = function (id) { var n = document.getElementById(id); return n ? n.value : ""; };
+    var cur = g("pw_cur"), nw = g("pw_new"), rep2 = g("pw_rep");
+    if (nw.length < 8) notice = { kind: "err", text: "Use at least 8 characters for the new password." };
+    else if (nw !== rep2) notice = { kind: "err", text: "The two new passwords do not match." };
+    else {
+      var r = await api("password", { password: cur, next: nw });
+      if (r.ok) { PASS = nw; store("trk_pass", PASS); notice = { kind: "ok", text: "Administrator password changed." }; }
+      else notice = { kind: "err", text: r.status === 401 ? "Current password is not right." : "Could not change the password. Try again." };
+    }
+    render(); window.scrollTo(0, 0);
+  }
+
+  /* ---------- shared chrome ---------- */
+  function topHtml() {
+    if (view === "home") return "";
+    return '<div class="bar" style="margin-bottom:6px"><button class="btn ghost small" type="button" data-act="home">&larr; Customer view</button></div>';
+    return '<div class="top gut"><div class="in"><button class="logo" type="button" data-act="home" aria-label="Prime Wave Delivery home">' + LOGO +
+      '<span class="nm"><b>Prime Wave</b><small>DELIVERY</small></span></button>' +
+      '<nav class="nav"><button type="button" data-act="home">Track</button><button type="button" data-act="help">Help</button></nav></div></div>';
+  }
+  function noticeHtml() { return notice ? '<div class="' + (notice.kind === "err" ? "err" : notice.kind === "warn" ? "warnbox" : "ok") + '">' + esc(notice.text) + "</div>" : ""; }
+  function page(inner) { return '<div class="main">' + topHtml() + inner + "</div>"; }
+
+  /* ---------- customer view ---------- */
+  function homeHtml() {
+    return page(
+      '<p class="lead">Enter your Prime Wave tracking ID. It starts with PW. You can track up to 10 at once.</p>' +
+      '<section class="card"><form data-form="lookup" class="stack" novalidate>' +
+      '<label for="tid">Tracking ID<input id="tid" autocomplete="off" autocapitalize="characters" placeholder="e.g. PW4821077305" value="' + esc(lookupVal) + '"></label>' +
+      '<div><button class="btn" type="submit" style="width:100%">Track</button></div>' +
+      '<p class="hint">Separate several numbers with commas or spaces.</p></form></section>' +
+      '<div id="result" aria-live="polite" class="stack">' + lookupResult + "</div>" +
+      '<section class="card" id="help"><h3>Need help with a delivery?</h3>' +
+      '<p style="margin:0 0 10px">For a late, missing or damaged package, contact us and have your tracking ID ready.</p>' +
+      '<p style="margin:0">' + (S.settings.phone ? "<b>Phone:</b> " + esc(S.settings.phone) + "<br>" : "") + "<b>Email:</b> " + esc(S.settings.email) + "</p></section>" +
+      "");
+  }
+  var ARROW = '<svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 12h9m-3.5-3.5L16.5 12 13 15.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  function stepRow(kind, title, lines) {
+    return '<li class="' + kind + '"><span class="rail">' + (kind === "now" ? '<span class="big">' + ARROW + "</span>" : '<span class="dot"></span>') + '</span><span class="txt"><span class="t">' + esc(title) + "</span>" +
+      (lines || []).map(function (l) { return '<span class="s' + (l.i ? " i" : "") + '">' + esc(l.t) + "</span>"; }).join("") + "</span></li>";
+  }
+  function resultHtml(o) {
+    var special = SPECIAL[o.status];
+    var stage = special ? -1 : Math.max(0, idx(o.status)), last = STAGES.length - 1;
+    var cur = special || STAGES[stage];
+    var cls = special ? (o.status === "onhold" ? "warn" : "bad") : "";
+    var meaning = o.meaning || defMean(o.status);
+    var rows = stepRow("done", "From", o.origin ? [{ t: o.origin }] : []);
+    if (special) rows += stepRow("now", special);
+    else STAGES.forEach(function (s, i) { rows += stepRow(i < stage ? "done" : i === stage ? "now" : "todo", s); });
+    rows += stepRow(stage === last ? "done" : "todo", "To", [{ t: o.destination }, { t: stage === last ? "Delivered" : "Scheduled delivery date", i: true }, { t: o.eta || "Pending" }]);
+    var events = o.events.map(function (e) {
+      return "<li><time>" + fmt(e.when) + "</time><div>" + esc(e.text) + (e.where ? '<div class="where">' + esc(e.where) + "</div>" : "") + "</div></li>";
+    }).join("");
+    var pod = stage === last && o.signedBy ? '<p style="margin:16px 0 0;font-size:14px"><b>Proof of delivery:</b> signed for by ' + esc(o.signedBy) + "</p>" : "";
+    return '<section class="card rise"><div class="lab first">' + (stage === last ? "Delivered" : "Scheduled delivery date") + '</div><div class="bigv">' + esc(o.eta || "Pending") + "</div>" +
+      '<div class="lab">Delivery status</div><div class="statv ' + cls + '">' + esc(cur) + "</div>" +
+      '<div class="lab">Tracking ID</div><div class="tn statv">' + esc(o.id) + '</div><p class="sub">Package for ' + esc(o.recipient) + "</p>" +
+      (meaning ? '<p class="meaning">' + esc(meaning) + "</p>" : "") + '<ol class="vs">' + rows + "</ol>" +
+      '<dl class="meta"><div><dt>Service</dt><dd>' + esc(o.service) + "</dd></div><div><dt>Weight</dt><dd>" + esc(o.weight || "-") + "</dd></div><div><dt>Contents</dt><dd>" + esc(o.contents || "-") + "</dd></div></dl>" + pod +
+      (events ? '<h3 style="margin-top:22px">Travel history</h3><ul class="tl">' + events + "</ul>" : "") + "</section>";
+  }
+  async function doLookup() {
+    var raw = document.getElementById("tid").value; lookupVal = raw;
+    var ids = []; raw.split(/[\s,;]+/).forEach(function (x) { var n = norm(x); if (n && ids.indexOf(n) < 0) ids.push(n); });
+    var out = document.getElementById("result");
+    if (!ids.length) { lookupResult = '<div class="err">Enter at least one tracking number.</div>'; out.innerHTML = lookupResult; return; }
+    ids = ids.slice(0, 10);
+    if (!PASS) await loadPublic();
+    out.innerHTML = '<p class="hint">Looking up your package...</p>';
+    var html = "";
+    for (var i = 0; i < ids.length; i++) {
+      var rec = S.pub.filter(function (r) { return r.id === ids[i]; })[0], found = null;
+      if (rec) { try { found = await unseal(rec, ids[i]); } catch (e) {} }
+      html += found ? resultHtml(found) : '<div class="err">We could not find tracking number ' + esc(ids[i]) + ". Check the number and try again.</div>";
+    }
+    lookupResult = html; out.innerHTML = html;
+  }
+
+  /* ---------- owner: unlock ---------- */
+  function gateHtml() {
+    var first = NEEDSETUP && !S.vault;
+    return page('<section><h1>' + (first ? "Set up access" : "Sign in") + '</h1><p class="lead">' +
+      (first ? "Choose an administrator password. You can change it later in Settings." : "Enter your administrator password to manage shipments.") + "</p></section>" +
+      '<section class="card"><form data-form="gate" class="stack" novalidate>' +
+      '<label for="pass1">Password<input id="pass1" type="password" autocomplete="current-password"></label>' +
+      (first ? '<label for="pass2">Repeat password<input id="pass2" type="password" autocomplete="new-password"></label>' : "") + noticeHtml() +
+      '<div class="bar"><button class="btn" type="submit">' + (first ? "Create password" : "Sign in") + '</button><button class="btn ghost" type="button" data-act="home">Back</button></div></form></section>');
+  }
+  async function doGate() {
+    var p1 = document.getElementById("pass1").value, p2 = document.getElementById("pass2");
+    var first = NEEDSETUP && !S.vault, r;
+    if (first) {
+      if (p1.length < 8) { notice = { kind: "err", text: "Use at least 8 characters." }; render(); return; }
+      if (!p2 || p1 !== p2.value) { notice = { kind: "err", text: "The two passwords do not match." }; render(); return; }
+    }
+    if (NEEDSETUP) {
+      var orders = [];
+      if (S.vault) { try { orders = (await unseal(S.vault, p1)).orders; } catch (e) { notice = { kind: "err", text: "That password is not right." }; render(); return; } }
+      r = await api("setup", { password: p1, orders: orders, settings: S.settings });
+      if (r.ok) { NEEDSETUP = false; ORDERS = orders; dirty = orders.length > 0; }
+    } else {
+      r = await api("login", { password: p1 });
+      if (r.ok) { ORDERS = r.data.orders || []; if (r.data.settings) { S.settings = r.data.settings; applyLabels(); } dirty = !!r.data.dirty; }
+    }
+    if (!r.ok) {
+      notice = { kind: "err", text: r.status === 401 ? "That password is not right." : r.status === 0 ? "Could not reach the server. Check your connection." : "Something went wrong. Try again." };
+      render(); return;
+    }
+    PASS = p1; notice = null; view = "manage"; store("trk_pass", PASS); store("trk_mgr", "1"); render();
+  }
+
+  /* ---------- owner: manage ---------- */
+  function pillCls(o) {
+    if (SPECIAL[o.status]) return o.status === "onhold" ? "pill transit" : "pill bad";
+    var s = idx(o.status);
+    return s > 0 && s < STAGES.length - 1 ? "pill transit" : "pill";
+  }
+  function statusOpts(cur) {
+    cur = String(cur);
+    function opt(v, t) { return '<option value="' + esc(v) + '"' + (cur === String(v) ? " selected" : "") + ">" + esc(t) + "</option>"; }
+    return STAGES.map(function (t, i) { return opt(IDS[i], t); }).join("") + opt("onhold", SPECIAL.onhold) + opt("exception", SPECIAL.exception) + opt("returned", SPECIAL.returned);
+  }
+  function quickStatus(i, v) {
+    var o = ORDERS[i];
+    if (!o || String(o.status) === String(v)) return;
+    var old = o.status; o.status = v;
+    if (!o.meaning || o.meaning === defMean(old)) o.meaning = "";
+    o.events.unshift({ when: new Date().toISOString(), text: SPECIAL[v] || STAGES[idx(v)] || "Status updated", where: "" });
+    dirty = true; notice = { kind: "ok", text: "Status updated. Press Publish to customers." };
+    persist(); render();
+  }
+  function manageHtml() {
+    if (editing === "settings") return settingsHtml();
+    if (editing) return formHtml();
+    var list = ORDERS.length ? '<ul class="olist">' + ORDERS.map(function (o, i) {
+      return '<li><div class="who"><b class="tn">' + esc(o.id) + "</b><span>" + esc(o.recipient) + " · " + esc(o.destination) + "</span></div>" +
+        '<select class="' + pillCls(o) + ' qs" data-qs="' + i + '" aria-label="Status for ' + esc(o.id) + '">' + statusOpts(o.status) + "</select>" +
+        '<button class="btn ghost small" type="button" data-act="edit" data-i="' + i + '">Edit</button></li>';
+    }).join("") + "</ul>" : '<p class="hint">No shipments yet. Add your first shipment, or load two examples to see how it works.</p>';
+    return page('<section><h1>Shipments</h1></section>' + noticeHtml() +
+      (dirty ? '<div class="warnbox">You have changes customers cannot see yet. Press Publish to customers.</div>' : "") +
+      '<div class="bar"><button class="btn" type="button" data-act="new">New shipment</button>' +
+      '<button class="btn" type="button" data-act="publish"' + (dirty ? "" : " disabled") + '>Publish to customers</button>' +
+      '<span class="grow"></span><button class="btn ghost small" type="button" data-act="settings">Settings</button></div>' +
+      '<section class="card">' + list + (ORDERS.length ? "" : '<div class="bar" style="margin-top:14px"><button class="btn ghost small" type="button" data-act="samples">Add 2 example shipments</button></div>') + "</section>" +
+      '<div class="bar"><button class="btn ghost small" type="button" data-act="home">View customer page</button><button class="link" type="button" data-act="lock">Sign out</button></div>');
+  }
+  function settingsHtml() {
+    var d = draft;
+    function inp(id, label, val) { return '<label for="' + id + '">' + label + '<input id="' + id + '" value="' + esc(val) + '"></label>'; }
+    var rows = d.steps.map(function (s, i) {
+      return '<div class="srow"><input id="s_st' + i + '" value="' + esc(s.name) + '" aria-label="Step ' + (i + 1) + ' name">' +
+        '<button class="btn ghost small" type="button" data-act="up" data-i="' + i + '" aria-label="Move up"' + (i === 0 ? " disabled" : "") + '>↑</button>' +
+        '<button class="btn ghost small" type="button" data-act="down" data-i="' + i + '" aria-label="Move down"' + (i === d.steps.length - 1 ? " disabled" : "") + '>↓</button>' +
+        '<button class="btn danger small" type="button" data-act="rmstep" data-i="' + i + '"' + (d.steps.length <= 2 ? " disabled" : "") + '>Delete</button></div>';
+    }).join("");
+    return page('<section><h1>Settings</h1></section>' + noticeHtml() +
+      '<section class="card"><form data-form="settings" class="stack" novalidate>' +
+      '<h3>Status steps</h3><p class="hint">These are the steps customers see, in order. The last step counts as delivered. Rename, move or delete any step, then press Save.</p>' +
+      '<div class="stack" style="gap:10px">' + rows + "</div>" +
+      '<div><button class="btn ghost small" type="button" data-act="addstep">Add a step</button></div>' +
+      '<h3 style="margin-top:8px">Other statuses</h3>' +
+      inp("s_sp_onhold", "Hold status", d.special.onhold) + inp("s_sp_exception", "Problem status", d.special.exception) + inp("s_sp_returned", "Return status", d.special.returned) +
+      '<h3 style="margin-top:8px">Administrator password</h3><label for="pw_cur">Current password<input id="pw_cur" type="password" autocomplete="current-password"></label><label for="pw_new">New password<input id="pw_new" type="password" autocomplete="new-password"></label><label for="pw_rep">Repeat new password<input id="pw_rep" type="password" autocomplete="new-password"></label><div><button class="btn ghost small" type="button" data-act="chpass">Change password</button></div>' +
+      '<h3 style="margin-top:8px">Contact details</h3>' + inp("s_ph", "Phone number", d.phone) + inp("s_em", "Support email", d.email) +
+      '<div class="bar"><button class="btn" type="submit">Save settings</button><button class="btn ghost" type="button" data-act="cancel">Cancel</button></div></form></section>');
+  }
+  function readSettings() {
+    var g = function (id) { var n = document.getElementById(id); return n ? n.value.trim() : ""; };
+    if (!draft || !document.getElementById("s_ph")) return;
+    draft.phone = g("s_ph"); draft.email = g("s_em");
+    draft.steps.forEach(function (s, i) { s.name = g("s_st" + i); });
+    draft.special = { onhold: g("s_sp_onhold"), exception: g("s_sp_exception"), returned: g("s_sp_returned") };
+  }
+  function saveSettings() {
+    readSettings();
+    if (draft.steps.some(function (s) { return !s.name; })) { notice = { kind: "err", text: "Every step needs a name." }; render(); return; }
+    var oldIds = IDS.slice(), newIds = draft.steps.map(function (s) { return s.id; }), moved = 0;
+    ORDERS.forEach(function (o) {
+      var k = oldIds.indexOf(String(o.status));
+      if (SPECIAL[o.status] || k < 0 || newIds.indexOf(String(o.status)) >= 0) return;
+      var target = null, j;
+      for (j = k + 1; j < oldIds.length && !target; j++) if (newIds.indexOf(oldIds[j]) >= 0) target = oldIds[j];
+      for (j = k - 1; j >= 0 && !target; j--) if (newIds.indexOf(oldIds[j]) >= 0) target = oldIds[j];
+      o.status = target || newIds[0]; changed[o.id] = true; moved++;
+    });
+    S.settings = {
+      phone: draft.phone, email: draft.email,
+      steps: draft.steps.map(function (s) { return { id: s.id, name: s.name }; }),
+      labels: { special: { onhold: draft.special.onhold || DEF_SPECIAL.onhold, exception: draft.special.exception || DEF_SPECIAL.exception, returned: draft.special.returned || DEF_SPECIAL.returned } }
+    };
+    applyLabels();
+    dirty = true; editing = null; draft = null; persist();
+    notice = { kind: "ok", text: "Settings saved." + (moved ? " " + moved + " shipment" + (moved > 1 ? "s were" : " was") + " moved to a nearby step." : "") + " Press Publish to customers." };
+    render();
+  }
+  function formHtml() {
+    var e = editing, st = String(e.status);
+    function opt(v, t) { return '<option value="' + v + '"' + (st === String(v) ? " selected" : "") + ">" + t + "</option>"; }
+    var opts = STAGES.map(function (t, i) { return opt(IDS[i], esc(t)); }).join("") + opt("onhold", esc(SPECIAL.onhold)) + opt("exception", esc(SPECIAL.exception)) + opt("returned", esc(SPECIAL.returned));
+    var svc = SERVICES.map(function (s) { return '<option' + (e.service === s ? " selected" : "") + ">" + s + "</option>"; }).join("");
+    var evs = e.events.length ? '<div class="evs">' + e.events.map(function (v, i) {
+      return '<div class="ev"><label for="ev_d_' + i + '">Date and time<input id="ev_d_' + i + '" type="datetime-local" value="' + esc(v.dl) + '"></label>' +
+        '<label for="ev_w_' + i + '">Place (optional)<input id="ev_w_' + i + '" value="' + esc(v.where) + '"></label>' +
+        '<label class="full" for="ev_t_' + i + '">Update<input id="ev_t_' + i + '" value="' + esc(v.text) + '" placeholder="e.g. Arrived at Abuja hub"></label>' +
+        '<div class="row full"><button class="btn ghost small" type="button" data-act="rmev" data-i="' + i + '">Remove</button></div></div>';
+    }).join("") + "</div>" : '<p class="hint">No updates yet.</p>';
+    return page('<section><h1 class="tn">' + esc(e.id) + '</h1><p class="lead">' + (e.isNew ? "New tracking number. Give this to the customer." : "Shipment details") + "</p></section>" + noticeHtml() +
+      '<section class="card"><form data-form="order" class="stack" novalidate><div class="grid">' +
+      '<label for="f_rec">Recipient name<input id="f_rec" value="' + esc(e.recipient) + '"></label>' +
+      '<label for="f_status">Status<select id="f_status">' + opts + "</select></label>" +
+      '<label class="full" for="f_mean">What this status means (customers see this)<textarea id="f_mean" placeholder="Write a short note for the customer">' + esc(e.meaning) + "</textarea></label>" +
+      '<p class="hint full">To rename, move or delete statuses, press Settings on the shipments list.</p>' +
+      '<label for="f_orig">From (city)<input id="f_orig" value="' + esc(e.origin) + '" placeholder="e.g. Ikeja, Lagos"></label>' +
+      '<label for="f_dest">To (address or city)<input id="f_dest" value="' + esc(e.destination) + '" placeholder="e.g. Wuse 2, Abuja"></label>' +
+      '<label for="f_svc">Service<select id="f_svc">' + svc + "</select></label>" +
+      '<label for="f_wt">Weight<input id="f_wt" value="' + esc(e.weight) + '" placeholder="e.g. 2.4 kg"></label>' +
+      '<label for="f_con">Contents<input id="f_con" value="' + esc(e.contents) + '" placeholder="e.g. Clothing"></label>' +
+      '<label for="f_eta">Expected delivery<input id="f_eta" value="' + esc(e.eta) + '" placeholder="e.g. Thursday, Nov 19"></label>' +
+      '<label class="full" for="f_sig">Signed for by (when delivered)<input id="f_sig" value="' + esc(e.signedBy) + '"></label></div>' +
+      '<div><h3>Travel history</h3>' + evs + '<div style="margin-top:12px"><button class="btn ghost small" type="button" data-act="addev">Add an update</button></div>' +
+      '<p class="hint" style="margin-top:10px">Set any date and time you like. Customers see updates newest first.</p></div>' +
+      '<div class="bar"><button class="btn" type="submit">Save shipment</button><button class="btn ghost" type="button" data-act="cancel">Cancel</button>' +
+      (e.isNew ? "" : '<span class="grow"></span><button class="btn danger small" type="button" data-act="delete">' + (e.confirmDelete ? "Tap again to delete" : "Delete shipment") + "</button>") + "</div></form></section>");
+  }
+  function readForm() {
+    var g = function (id) { var n = document.getElementById(id); return n ? n.value : ""; };
+    if (!document.getElementById("f_rec")) return;
+    editing.recipient = g("f_rec").trim(); editing.status = g("f_status"); editing.meaning = g("f_mean").trim(); editing.origin = g("f_orig").trim();
+    editing.destination = g("f_dest").trim(); editing.service = g("f_svc"); editing.weight = g("f_wt").trim();
+    editing.contents = g("f_con").trim(); editing.eta = g("f_eta").trim(); editing.signedBy = g("f_sig").trim();
+    editing.events.forEach(function (v, i) { v.dl = g("ev_d_" + i); v.text = g("ev_t_" + i).trim(); v.where = g("ev_w_" + i).trim(); });
+  }
+  function saveOrder() {
+    readForm();
+    var e = editing;
+    var rows = e.events.filter(function (v) { return v.text; });
+    var problem = !e.recipient ? "Enter the recipient's name." : !e.destination ? "Enter where the package is going." :
+      rows.some(function (v) { return !validLocal(v.dl); }) ? "Enter a valid date and time for each update." : "";
+    if (problem) { notice = { kind: "err", text: problem }; render(); return; }
+    var status = SPECIAL[e.status] ? e.status : String(e.status);
+    var late = rows.filter(function (v) { return new Date(v.dl) > new Date(Date.now() + 300000); });
+    if (late.length) { notice = { kind: "err", text: "Event dates and times cannot be in the future. Please correct them." }; render(); return; }
+    var events = rows.map(function (v) { return { when: new Date(v.dl).toISOString(), text: v.text, where: v.where }; });
+    var prev = e.isNew ? null : ORDERS.filter(function (o) { return o.id === e.id; })[0];
+    var now = new Date().toISOString();
+    if (e.isNew && !events.length) events.push({ when: now, text: EVENT_TEXT[0], where: e.origin });
+    else if (prev && !e.added && String(prev.status) !== String(status)) events.push({ when: now, text: SPECIAL[status] || STAGES[idx(status)] || "Status updated", where: "" });
+    events.sort(function (a, b) { return new Date(b.when) - new Date(a.when); });
+    var o = { id: e.id, recipient: e.recipient, origin: e.origin, destination: e.destination, service: e.service, weight: e.weight, contents: e.contents, status: status, meaning: e.meaning, eta: e.eta, signedBy: e.signedBy, events: events };
+    if (e.isNew) ORDERS.unshift(o); else ORDERS[ORDERS.indexOf(prev)] = o;
+    dirty = true; editing = null; persist();
+    notice = { kind: "ok", text: "Saved. Press Publish to customers when you are ready." };
+    render();
+  }
+  function blank() {
+    var id; do { id = newTn(); } while (ORDERS.some(function (o) { return o.id === id; }));
+    return { isNew: true, id: id, recipient: "", origin: "", destination: "", service: "Standard", weight: "", contents: "", status: IDS[0], meaning: defMean(IDS[0]), eta: "", signedBy: "", events: [], added: 0 };
+  }
+  function addSamples() {
+    function ago(h) { return new Date(Date.now() - h * 3600000).toISOString(); }
+    var s = [
+      { id: "PW4821077305", recipient: "Amaka O.", origin: "Ikeja, Lagos", destination: "Lekki Phase 1, Lagos", service: "Same-day", weight: "1.8 kg", contents: "Clothing", status: IDS[Math.min(3, IDS.length - 1)], meaning: "", eta: "Today, before 6 PM", signedBy: "",
+        events: [{ when: ago(2), text: "Out for delivery", where: "Lekki, Lagos" }, { when: ago(9), text: "Arrived at delivery hub", where: "Ajah, Lagos" }, { when: ago(20), text: "Picked up from sender", where: "Ikeja, Lagos" }, { when: ago(22), text: "Shipment information received", where: "Ikeja, Lagos" }] },
+      { id: "PW7710295564", recipient: "Tunde A.", origin: "Ikeja, Lagos", destination: "Wuse 2, Abuja", service: "Express", weight: "3.2 kg", contents: "Shoes", status: IDS[IDS.length - 1], meaning: "", eta: "Yesterday, 2:15 PM", signedBy: "T. Adeyemi",
+        events: [{ when: ago(26), text: "Delivered", where: "Abuja" }, { when: ago(38), text: "Out for delivery", where: "Abuja" }, { when: ago(60), text: "In transit", where: "Lagos to Abuja" }, { when: ago(80), text: "Shipment information received", where: "Ikeja, Lagos" }] }
+    ];
+    s.forEach(function (o) { ORDERS.push(o); changed[o.id] = true; });
+    dirty = true;
+    notice = { kind: "warn", text: "Example shipments added. Delete them before you publish for real customers." };
+  }
+
+  /* ---------- render + events ---------- */
+  function render() {
+    root.innerHTML = view === "home" ? homeHtml() : view === "gate" ? gateHtml() : manageHtml();
+  }
+  function goto(id) { var n = document.getElementById(id); if (n) n.scrollIntoView({ behavior: "smooth", block: "start" }); }
+  root.addEventListener("change", function (ev) {
+    var qs = ev.target.getAttribute("data-qs");
+    if (qs !== null) { quickStatus(Number(qs), ev.target.value); return; }
+    if (ev.target.id !== "f_status" || !editing) return;
+    var ta = document.getElementById("f_mean"), old = editing.status, nw = ev.target.value;
+    if (ta && (!ta.value.trim() || ta.value.trim() === defMean(old))) ta.value = defMean(nw);
+    editing.status = nw;
+  });
+  root.addEventListener("click", function (ev) {
+    var b = ev.target.closest("[data-act]");
+    if (!b) return;
+    var a = b.getAttribute("data-act"), i = Number(b.getAttribute("data-i"));
+    if (a === "home") { notice = null; editing = null; view = "home"; render(); window.scrollTo(0, 0); return; }
+    if (a === "help") { if (view !== "home") { view = "home"; render(); } goto(a); return; }
+    if (a === "staff") { notice = null; view = ORDERS ? "manage" : "gate"; render(); window.scrollTo(0, 0); return; }
+    if (a === "lock") { PASS = null; ORDERS = null; store("trk_pass", null); store("trk_mgr", null); notice = null; view = "home"; render(); return; }
+    if (a === "new") { notice = null; editing = blank(); render(); window.scrollTo(0, 0); return; }
+    if (a === "edit") {
+      var o = ORDERS[i]; notice = null;
+      editing = { isNew: false, id: o.id, recipient: o.recipient, origin: o.origin, destination: o.destination, service: o.service, weight: o.weight, contents: o.contents, status: String(o.status), meaning: o.meaning || defMean(o.status), eta: o.eta, signedBy: o.signedBy, added: 0,
+        events: o.events.map(function (v) { return { dl: toLocalInput(v.when), text: v.text, where: v.where || "" }; }) };
+      render(); window.scrollTo(0, 0); return;
+    }
+    if (a === "addev") { readForm(); editing.events.unshift({ dl: toLocalInput(new Date().toISOString()), text: "", where: "" }); editing.added = (editing.added || 0) + 1; render(); return; }
+    if (a === "rmev") { readForm(); editing.events.splice(i, 1); render(); return; }
+    if (a === "cancel") { notice = null; editing = null; render(); return; }
+    if (a === "settings") {
+      notice = null; editing = "settings";
+      draft = { phone: S.settings.phone || "", email: S.settings.email || "", steps: STEPS.map(function (s) { return { id: s.id, name: s.name }; }), special: { onhold: SPECIAL.onhold, exception: SPECIAL.exception, returned: SPECIAL.returned } };
+      render(); window.scrollTo(0, 0); return;
+    }
+    if (a === "up" || a === "down") {
+      readSettings(); var j = a === "up" ? i - 1 : i + 1;
+      if (j >= 0 && j < draft.steps.length) { var tmp = draft.steps[i]; draft.steps[i] = draft.steps[j]; draft.steps[j] = tmp; }
+      render(); return;
+    }
+    if (a === "rmstep") { readSettings(); if (draft.steps.length > 2) draft.steps.splice(i, 1); render(); return; }
+    if (a === "addstep") { readSettings(); draft.steps.splice(draft.steps.length - 1, 0, { id: "n" + Date.now().toString(36) + Math.floor(Math.random() * 1000), name: "New step" }); render(); return; }
+    if (a === "chpass") { changePass(); return; }
+    if (a === "samples") { addSamples(); persist(); render(); return; }
+    if (a === "publish") { publishAll(); return; }
+    if (a === "delete") {
+      readForm();
+      if (!editing.confirmDelete) { editing.confirmDelete = true; render(); return; }
+      ORDERS = ORDERS.filter(function (o) { return o.id !== editing.id; });
+      dirty = true; editing = null; persist();
+      notice = { kind: "ok", text: "Shipment deleted. Press Publish to customers to remove it from the customer page." };
+      render();
+    }
+  });
+  root.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var f = ev.target.getAttribute("data-form");
+    if (f === "lookup") doLookup();
+    else if (f === "gate") doGate();
+    else if (f === "order") saveOrder();
+    else if (f === "settings") saveSettings();
+  });
+
+  /* ---------- start ---------- */
+  render();
+  var pubP = loadPublic();
+  window.PW = { open: function (v, n) {
+    notice = null; editing = null;
+    if (v === "staff") view = ORDERS ? "manage" : "gate"; else { view = "home"; lookupVal = n || ""; lookupResult = ""; }
+    render();
+    if (v === "staff") pubP.then(function () { if (view === "gate") render(); });
+    if (v !== "staff" && n) pubP.then(function () { var t = document.getElementById("tid"); if (t && view === "home") { t.value = n; doLookup(); } });
+  } };
+  pubP.then(function () {
+    var t = document.getElementById("tid");
+    if (view === "home" && t && !t.value && !lookupResult) render();
+  });
+  var sp = load("trk_pass");
+  if (sp && load("trk_mgr") === "1") {
+    api("login", { password: sp }).then(function (r) {
+      if (!r.ok) { if (r.status === 401) { store("trk_pass", null); store("trk_mgr", null); } return; }
+      ORDERS = r.data.orders || []; PASS = sp; dirty = !!r.data.dirty;
+      if (r.data.settings) { S.settings = r.data.settings; applyLabels(); }
+      view = "manage"; render();
+    });
+  }
+})();
+</script>
+<script>
+/* Chat (optional): paste your Tawk.to id, like 'propertyId/widgetId' */
+const TAWK='';
+if(TAWK){const t=document.createElement('script');t.async=true;t.src='https://embed.tawk.to/'+TAWK;t.charset='UTF-8';t.setAttribute('crossorigin','*');document.head.appendChild(t)}
+const P={air:'<path d="M2 16l20-8-8 14-3-6-9 0z"/><path d="M11 16l11-8"/>',sea:'<path d="M3 17l2 3h14l2-3z"/><path d="M6 17V9h12v8M12 9V4h4"/>',road:'<path d="M2 17V6h11v11M13 10h5l4 4v3h-9"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',wh:'<path d="M3 21V9l9-6 9 6v12M7 21v-7h10v7"/>',box:'<path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/>',pin:'<path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>',tag:'<path d="M3 12V3h9l9 9-9 9z"/><circle cx="7.5" cy="7.5" r="1.5"/>',biz:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3"/>',globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'};
+const ic=k=>`<svg viewBox="0 0 24 24">${P[k]}</svg>`;
+const IM={air:'air',sea:'sea',road:'road',wh:'warehouse',globe:'global',box:'business'};
+const art=k=>`<div class="art" data-img="images/${IM[k]}.jpg">${ic(k)}</div>`;
+const hd=(t,s)=>`<div class="page-h"><div class="wrap"><h1>${t}</h1><p>${s}</p></div></div>`;
+const band=`<div class="cta-band"><div class="wrap rv"><h2>Ready to move your freight?</h2><p>Tell us what you need to ship and we’ll come back with options.</p><a class="btn" style="background:#fff;color:#1e40af" href="#quote">Request a Quote</a></div></div>`;
+const trackBox=`<form class="row" data-f="track"><input name="n" placeholder="Enter tracking number" required aria-label="Tracking number"><button class="btn">Track</button></form><div class="msg" hidden></div>`;
+const SV={
+'air-freight':{t:'Air Freight',k:'air',s:'Time-critical cargo, moved by air.',d:'Air freight suits urgent, high-value or perishable consignments. We plan routing, handle documentation and coordinate pickup and delivery so your cargo keeps moving.',f:['Express and standard air options','Door-to-door or airport-to-airport','Customs documentation support','Dangerous goods and temperature-sensitive requests on enquiry']},
+'ocean-freight':{t:'Ocean Freight',k:'sea',s:'Cost-effective capacity for large shipments.',d:'Ocean freight is the economical choice for heavy or bulky cargo. We help you choose between full container (FCL) and shared container (LCL) options.',f:['FCL and LCL shipments','Port-to-port and door-to-door','Booking and documentation support','Consolidation for smaller loads']},
+'road-freight':{t:'Road Freight',k:'road',s:'Flexible overland transport.',d:'Road freight offers flexible scheduling and direct access to customers, factories and warehouses, for full or part loads.',f:['Full truckload and part load','Palletised and general cargo','Scheduled and one-off collections','Links with air and ocean legs']},
+'warehousing':{t:'Warehousing',k:'wh',s:'Storage and fulfilment that fits your flow.',d:'Short and long-term storage with inventory handling, picking, packing and dispatch, so goods are ready when your customers are.',f:['Short and long-term storage','Pick, pack and dispatch','Inventory handling','Cross-docking and consolidation']}};
+const svcPage=k=>{const s=SV[k];return hd(s.t,s.s)+`<section class="s"><div class="wrap split"><div class="rv"><span class="eye">${s.t}</span><h2>${s.s}</h2><p class="muted">${s.d}</p><ul class="ck">${s.f.map(x=>`<li>${x}</li>`).join('')}</ul><a class="btn" href="#quote">Get a Quote</a> <a class="btn g" href="#contact">Talk to Us</a></div><div class="rv">${art(s.k)}</div></div></section>
+<section class="s alt"><div class="wrap"><h2 class="rv">Other services</h2><div class="grid g3">${Object.keys(SV).filter(x=>x!=k).map(x=>`<a class="card tile rv" href="#${x}" style="color:inherit"><div class="ic">${ic(SV[x].k)}</div><h3>${SV[x].t}</h3><p class="muted">${SV[x].s}</p></a>`).join('')}</div></div></section>`+band};
+const fld=(l,n,t='text',r=1,x='')=>`<label>${l}</label><input name="${n}" type="${t}" ${r?'required':''} ${x}>`;
+const R={
+home:()=>`<section class="hero" data-img="images/hero.jpg"><div class="orb"></div><div class="wrap"><span class="eye" style="color:#7dd3fc">PRIMEWAVE DELIVERY</span><h1>Ship with confidence, anywhere.</h1><p>Air, ocean and road freight plus warehousing, all coordinated by one logistics partner.</p><div class="cta"><a class="btn" style="background:#fff;color:#1e40af" href="#quote">Get a Quote</a><a class="btn o" href="#services">Explore Services</a></div></div><svg class="w" viewBox="0 0 1200 80" preserveAspectRatio="none"><path d="M0 40c150-40 300 40 450 0s300-40 450 0 150 20 300 0v40H0z" fill="var(--bg)"/><path d="M0 40c150-40 300 40 450 0s300-40 450 0 150 20 300 0" fill="none"/></svg></section>
+<div class="wrap track"><div class="card"><h2 style="font-size:26px">Track Your Shipment</h2>${trackBox}</div></div>
+<section class="s"><div class="wrap grid g3">
+<a class="card tile rv" href="#track" style="color:inherit"><div class="ic">${ic('pin')}</div><h3>Track</h3><p class="muted">Look up a shipment with your tracking number.</p></a>
+<a class="card tile rv" href="#quote" style="color:inherit"><div class="ic">${ic('tag')}</div><h3>Get a Quote</h3><p class="muted">Tell us about your cargo and receive options.</p></a>
+<a class="card tile rv" href="#register" style="color:inherit"><div class="ic">${ic('biz')}</div><h3>Business Account</h3><p class="muted">Shipping regularly? Create an account to get started.</p></a></div></section>
+<section class="s alt"><div class="wrap"><span class="eye">Our services</span><h2 class="rv">Freight solutions for every route</h2><div class="grid g3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">${Object.keys(SV).map(x=>`<a class="card tile rv" href="#${x}" style="color:inherit"><div class="ic">${ic(SV[x].k)}</div><h3>${SV[x].t}</h3><p class="muted">${SV[x].s}</p></a>`).join('')}</div></div></section>
+<section class="s"><div class="wrap split"><div class="rv"><span class="eye">Cargo shipping</span><h2>One partner, every mode</h2><p class="muted">Combine air, ocean and road legs into a single plan. We coordinate handovers, paperwork and delivery so you deal with one team.</p><ul class="ck"><li>Air, ocean and road freight</li><li>Warehousing and fulfilment</li><li>Support for business and one-off shippers</li></ul><a class="btn" href="#services">Explore Shipping Options</a></div><div class="rv">${art('globe')}</div></div></section>
+<section class="s alt"><div class="wrap split rev"><div class="rv"><span class="eye">For business</span><h2>Logistics for growing companies</h2><p class="muted">Power your small or mid-sized business with flexible shipping and storage, and talk to our team about solutions that match your volumes.</p><a class="btn" href="#contact">Explore Business Solutions</a></div><div class="rv">${art('box')}</div></div></section>
+<section class="s"><div class="wrap"><span class="eye">Why PRIMEWAVE</span><h2 class="rv">About the company</h2><div class="grid g3"><div class="card tile rv"><h3>Coordinated</h3><p class="muted">One point of contact across every leg of the journey.</p></div><div class="card tile rv"><h3>Flexible</h3><p class="muted">From single parcels to full loads, by air, sea or road.</p></div><div class="card tile rv"><h3>Transparent</h3><p class="muted">Clear quotes and plain-language updates.</p></div></div><p style="margin-top:24px"><a href="#about">Learn more about us →</a></p></div></section>${band}`,
+about:()=>hd('About Us','Who we are and how we work.')+`<section class="s"><div class="wrap split"><div class="rv"><span class="eye">PRIMEWAVE DELIVERY</span><h2>Logistics built around your cargo</h2><p class="muted">PRIMEWAVE DELIVERY is a logistics and shipping company offering air, ocean and road freight and warehousing. This is a demonstration website; replace this text with your real company story, history and figures.</p><ul class="ck"><li>Customer-first communication</li><li>Reliable planning across modes</li><li>Clear, honest quoting</li></ul><a class="btn" href="#contact">Get in Touch</a></div><div class="rv">${art('globe')}</div></div></section><section class="s alt"><div class="wrap"><h2>Our values</h2><div class="grid g3"><div class="card tile"><h3>Reliability</h3><p class="muted">We plan carefully and keep you informed.</p></div><div class="card tile"><h3>Safety</h3><p class="muted">Cargo is handled with care at every step.</p></div><div class="card tile"><h3>Sustainability</h3><p class="muted">We look for efficient routes and consolidation to cut waste.</p></div></div></div></section>`+band,
+services:()=>hd('Our Services','Freight and storage options for businesses and individuals.')+`<section class="s"><div class="wrap grid g2">${Object.keys(SV).map(x=>`<a class="card tile rv" href="#${x}" style="color:inherit"><div class="ic">${ic(SV[x].k)}</div><h3>${SV[x].t}</h3><p class="muted">${SV[x].d}</p><b>Learn more →</b></a>`).join('')}</div></section>`+band,
+track:()=>hd('Shipment Tracking','Look up a shipment by tracking number.')+`<section class="s"><div class="wrap narrow"><div class="card">${trackBox}<div class="note">Enter the tracking number you were given. Only shipments registered by PRIMEWAVE DELIVERY appear here.</div></div></div></section>`,
+quote:()=>hd('Request a Quote','Tell us about your shipment.')+`<section class="s"><div class="wrap narrow"><form class="card" data-f="quote">${fld('Full name','name')}${fld('Email','email','email')}<label>Service</label><select name="svc"><option>Air Freight</option><option>Ocean Freight</option><option>Road Freight</option><option>Warehousing</option></select>${fld('Origin','from')}${fld('Destination','to')}<label>Cargo details</label><textarea name="d" rows="4" placeholder="Type of goods, weight, dimensions, timing"></textarea><p><button class="btn">Request Quote</button></p><div class="msg" hidden></div></form></div></section>`,
+contact:()=>hd('Contact Us','Questions? Send us a message.')+`<section class="s"><div class="wrap grid g2"><div class="rv"><h2>Get in touch</h2><p class="muted">Add your company’s real phone number, email and office address here before publishing.</p><div class="card"><h3>Business hours</h3><p class="muted">To be added by the site owner.</p></div></div><form class="card" data-f="contact">${fld('Name','name')}${fld('Email','email','email')}<label>Message</label><textarea name="m" rows="5" required></textarea><p><button class="btn">Send Message</button></p><div class="msg" hidden></div></form></div></section>`,
+login:()=>hd('Customer Login','Access your customer portal.')+`<section class="s"><div class="wrap narrow"><form class="card" data-f="login">${fld('Email','email','email')}${fld('Password','pw','password',1,'autocomplete="current-password"')}<p><button class="btn" style="width:100%">Log In</button></p><div class="msg" hidden></div><p class="muted" style="text-align:center">No account? <a href="#register">Create one</a></p></form></div></section>`,
+register:()=>hd('Create Account','Register for a PRIMEWAVE DELIVERY customer account.')+`<section class="s"><div class="wrap narrow"><form class="card" data-f="register">${fld('Full name','name')}${fld('Company (optional)','co','text',0)}${fld('Email','email','email')}${fld('Password','pw','password',1,'minlength="8" autocomplete="new-password"')}<p><button class="btn" style="width:100%">Create Account</button></p><div class="msg" hidden></div><p class="muted" style="text-align:center">Already registered? <a href="#login">Log in</a></p></form></div></section>`
+};
+Object.keys(SV).forEach(k=>R[k]=()=>svcPage(k));
+const M=[['home','Home'],['about','About Us'],['services','Services',Object.keys(SV)],['track','Track'],['quote','Get a Quote'],['contact','Contact']];
+document.getElementById('menu').innerHTML=M.map(([h,t,sub])=>sub?`<li class="dd"><a class="l" href="#services" data-r="services">${t} ▾</a><div>${sub.map(s=>`<a class="l" href="#${s}" data-r="${s}">${SV[s].t}</a>`).join('')}</div></li>`:`<li><a class="l" href="#${h}" data-r="${h}">${t}</a></li>`).join('')+`<li><a class="l" href="#login" data-r="login">Login</a></li><li><a class="btn" href="#register" style="padding:9px 16px">Create Account</a></li>`;
+const OK={track:'This is a demo, so no live tracking data is available. No shipment information is shown.',quote:'Thanks! This demo form doesn’t send data anywhere yet. Connect it to your email or CRM to receive requests.',contact:'Thanks! This demo form doesn’t send data anywhere yet. Connect it to a form service or backend.',login:'Demo only: no authentication backend is connected, and nothing you typed was stored or sent.',register:'Demo only: no account was created, and nothing you typed was stored or sent.'};
+let io;
+function render(){const raw=location.hash.slice(1)||'home',T=/^track(-|$)/.test(raw),A=raw==='admin',k=T?'track':A?'admin':(R[raw]?raw:'home');
+document.getElementById('app').innerHTML=(T||A)?'':R[k]();
+document.getElementById('pwwrap').hidden=!(T||A);
+if(T||A){document.getElementById('pwh').innerHTML=A?hd('Staff Area','Manage shipments and tracking updates.'):hd('Shipment Tracking','Track your PRIMEWAVE DELIVERY shipments.');const n=T?(raw.length>6?decodeURIComponent(raw.slice(6)):(window.PENDING||'')):'';window.PENDING='';window.PW&&PW.open(A?'staff':'home',n)}
+window.scrollTo(0,0);
+document.title=(k==='home'?'':k.replace(/-/g,' ').replace(/\b\w/g,c=>c.toUpperCase())+' – ')+'PRIMEWAVE DELIVERY';
+document.querySelectorAll('#menu a.l').forEach(a=>a.classList.toggle('on',a.dataset.r===k));
+document.getElementById('nav').classList.remove('open');
+io&&io.disconnect();io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+document.querySelectorAll('[data-img]').forEach(n=>{const i=new Image();i.onload=()=>{const u='url('+n.dataset.img+')';n.style.backgroundImage=n.classList.contains('hero')?'linear-gradient(rgba(11,31,77,.72),rgba(11,31,77,.5)),'+u:u;n.style.backgroundSize='cover';n.style.backgroundPosition='center';n.classList.add('ph')};i.src=n.dataset.img});
+document.querySelectorAll('form[data-f]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const m=f.parentNode.querySelector('.msg')||f.querySelector('.msg');if(f.dataset.f==='track')return lookup(f,m);m.textContent=OK[f.dataset.f];m.hidden=false;f.reset()}))}
+
+function lookup(f){const n=f.elements.n.value.trim();if(!n)return;window.PENDING=n;if(location.hash==='#track')render();else location.hash='track'}
+addEventListener('hashchange',render);render();
+document.getElementById('burger').onclick=()=>document.getElementById('nav').classList.toggle('open');
+document.getElementById('theme').onclick=e=>{e.preventDefault();const d=document.documentElement,dark=getComputedStyle(d).colorScheme==='dark';d.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
