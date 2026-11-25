@@ -101,7 +101,7 @@ footer .bot{border-top:1px solid #ffffff22;margin-top:32px;padding-top:18px;font
 </div>
 <div class="bot"><span><a href="#admin" aria-label="Staff area" style="display:inline;color:inherit">©</a> 2026 PRIMEWAVE DELIVERY. All rights reserved.</span></div>
 </div></footer>
-<script type="application/json" id="state">{"settings":{"phone":"","email":"support@primewavedelivery.com","steps":[{"id":"1","name":"PACKAGE RECEIVED BY PRIME WAVE"},{"id":"2","name":"IN TRANSIT"},{"id":"3","name":"OUT FOR DELIVERY"},{"id":"4","name":"DELIVERED"}],"labels":{"special":{"onhold":"ON HOLD","exception":"Delivery exception","returned":"Returned to sender"}}},"pub":[{"s":"3uD4Ed88IP89JPNVOrLKAw==","i":"ZcHKqrqRBC5GbhOU","c":"8rkGPKGMV8ixNrNrqb2vQc9n5W+42OIsLn7Y21P7yok/+ydtKVZMFoQxxYVbilqhqvHhWUovN2eWmaLsIPuYE0merd68Yt1vIGvzgC/pembgBiJtSNFyl642Sq7iUTnyuCsSifs9vaSab9iYj1nEqdV5Uz7zCNS7j550l/eTLTunTwmnJV4oa7ScQcff0sEdtuKabxFwF2l/BcoZiGoseVjKwHO7WCpDKJvs68kreSPSqYg1zU3dPkZguLwrCstesHl9RozyrdL8UTxt+M3+jFYUFIvrYwiWZJRnt0ru2CjaWyZ8a06OUFbI6ShWWoxEALzYKBIpbJEOxcseN3aZorUxSPlHAsvrZu7Hw0X/LZsr7JxdQl1Ym554Bo+cGc8Uv8/Eib5EOQSRVIgqFTYh9EPSqUg5nuGi2Dv+w3vebG36T30F/4RTw6xJ4qebeLOM6M/SAPfThaaIba/lY8+qya0Rc5lhioQwnIgt9mw9IwH3+sMDxYzr+FwWTPW/ykCBYGTQAy3CTjlvGaP16CtLlZx9TIryC34Eyzia/vymemqvJ/9tY7TDQnUF7cTePQSh/sj4UsdCCYpV9MoBQE7oIY025G9Eob7WJDwtw+a5","id":"PW7476291114"}],"vault":{"s":"jmgXWvU+7zelzxyFjtgh2Q==","i":"QSIEhcMOo7XjeVyt","c":"9ZkNhsbUjZsLPU2W2uN7x4cTSqNIOHmODYZ1wr5ZiYWF0HgftCfD7xAfBm5AqGBM/xpmLlyO0s2cKzezMU4FUPkWhUlABNStUUGCAOoke+dQcQkfMXkh5L/neYQBV8dHyLDBaHCrER3dChgyrv69kjYJfnDOoZzhBAe+7H5QllzvSRTGIHn+bXJDtL+qM58T5jVpvDK/abuSAPfgwp5ozaufT3Hpy9y8zJ07BeiMb0DYvsHyiWR6M49Pm54r5pOFHT5bFUYIfkfj4TGY3eqv4W1cbtpn2pTD4lcXO9RNXGxtP/lTnm3lAVFupSCRmODVcbynGm9u7lJoMsc/TWEit8TuxIvrjC8ps+y1nD/HGO5MZiylTJhQbFhCIH9W9HQupJyfGSBsjdUfZzN5N5obF0UES9+u8x0JAWDkR0TuCbc3cmoJXJgIcgFFgNAKF/2C5r6Ywwn1N0Jm82f3k6975BmNo+3FgPJgoW1+mOJ6NYgNsz0SBbyqBVpprBU4vKzD99hEQsO3vqHuGSzU4idpPQEYcK8sv2hPDtPPeSiIrw2rg1OwSVq0KxR4WbvHAGTPY1ZvsVcKlPHZT/67CODgLQmdnl81fBUC+opXx7I91eIMWGoEwh5rYyKUxg=="}}</script>
+<script type="application/json" id="state">{"settings": {"phone": "", "email": "support@primewavedelivery.com", "steps": [{"id": "1", "name": "PACKAGE RECEIVED BY PRIME WAVE"}, {"id": "2", "name": "IN TRANSIT"}, {"id": "3", "name": "OUT FOR DELIVERY"}, {"id": "4", "name": "DELIVERED"}], "labels": {"special": {"onhold": "ON HOLD", "exception": "Delivery exception", "returned": "Returned to sender"}}}, "pub": []}</script>
 <script id="app-script">
 (function () {
   /* ---------- state ---------- */
@@ -566,6 +566,7 @@ footer .bot{border-top:1px solid #ffffff22;margin-top:32px;padding-top:18px;font
     notice = null; editing = null;
     if (v === "staff") view = ORDERS ? "manage" : "gate"; else { view = "home"; lookupVal = n || ""; lookupResult = ""; }
     render();
+    if (v === "staff") pubP.then(function () { if (view === "gate") render(); });
     if (v !== "staff" && n) pubP.then(function () { var t = document.getElementById("tid"); if (t && view === "home") { t.value = n; doLookup(); } });
   } };
   pubP.then(function () {
