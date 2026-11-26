@@ -97,7 +97,7 @@ footer .bot{border-top:1px solid #ffffff22;margin-top:32px;padding-top:18px;font
 <div><h4>PRIMEWAVE DELIVERY</h4><p>Air, ocean and road freight, warehousing and shipment tracking for businesses and individuals.</p></div>
 <div><h4>Services</h4><a href="#air-freight">Air Freight</a><a href="#ocean-freight">Ocean Freight</a><a href="#road-freight">Road Freight</a><a href="#warehousing">Warehousing</a></div>
 <div><h4>Company</h4><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#contact">Contact Us</a></div>
-<div><h4>Customers</h4><a href="#track">Track Shipment</a><a href="#quote">Request a Quote</a><a href="#login">Customer Login</a><a href="#register">Create Account</a></div>
+<div><h4>Customers</h4><a href="#track">Track Shipment</a><a href="#quote">Request a Quote</a></div>
 </div>
 <div class="bot"><span><a href="#admin" aria-label="Staff area" style="display:inline;color:inherit">©</a> 2026 PRIMEWAVE DELIVERY. All rights reserved.</span></div>
 </div></footer>
@@ -611,7 +611,7 @@ home:()=>`<section class="hero" data-img="images/hero"><div class="orb"></div><d
 <section class="s"><div class="wrap grid g3">
 <a class="card tile rv" href="#track" style="color:inherit"><div class="ic">${ic('pin')}</div><h3>Track</h3><p class="muted">Look up a shipment with your tracking number.</p></a>
 <a class="card tile rv" href="#quote" style="color:inherit"><div class="ic">${ic('tag')}</div><h3>Get a Quote</h3><p class="muted">Tell us about your cargo and receive options.</p></a>
-<a class="card tile rv" href="#register" style="color:inherit"><div class="ic">${ic('biz')}</div><h3>Business Account</h3><p class="muted">Shipping regularly? Create an account to get started.</p></a></div></section>
+<a class="card tile rv" href="#contact" style="color:inherit"><div class="ic">${ic('biz')}</div><h3>Business Shipping</h3><p class="muted">Shipping regularly? Talk to us about your business needs.</p></a></div></section>
 <section class="s alt"><div class="wrap"><span class="eye">Our services</span><h2 class="rv">Freight solutions for every route</h2><div class="grid g3" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">${Object.keys(SV).map(x=>`<a class="card tile rv" href="#${x}" style="color:inherit"><div class="ic">${ic(SV[x].k)}</div><h3>${SV[x].t}</h3><p class="muted">${SV[x].s}</p></a>`).join('')}</div></div></section>
 <section class="s"><div class="wrap split"><div class="rv"><span class="eye">Cargo shipping</span><h2>One partner, every mode</h2><p class="muted">Combine air, ocean and road legs into a single plan. We coordinate handovers, paperwork and delivery so you deal with one team.</p><ul class="ck"><li>Air, ocean and road freight</li><li>Warehousing and fulfilment</li><li>Support for business and one-off shippers</li></ul><a class="btn" href="#services">Explore Shipping Options</a></div><div class="rv">${art('globe')}</div></div></section>
 <section class="s alt"><div class="wrap split rev"><div class="rv"><span class="eye">For business</span><h2>Logistics for growing companies</h2><p class="muted">Power your small or mid-sized business with flexible shipping and storage, and talk to our team about solutions that match your volumes.</p><a class="btn" href="#contact">Explore Business Solutions</a></div><div class="rv">${art('box')}</div></div></section>
@@ -626,7 +626,7 @@ register:()=>hd('Create Account','Register for a PRIMEWAVE DELIVERY customer acc
 };
 Object.keys(SV).forEach(k=>R[k]=()=>svcPage(k));
 const M=[['home','Home'],['about','About Us'],['services','Services',Object.keys(SV)],['track','Track'],['quote','Get a Quote'],['contact','Contact']];
-document.getElementById('menu').innerHTML=M.map(([h,t,sub])=>sub?`<li class="dd"><a class="l" href="#services" data-r="services">${t} ▾</a><div>${sub.map(s=>`<a class="l" href="#${s}" data-r="${s}">${SV[s].t}</a>`).join('')}</div></li>`:`<li><a class="l" href="#${h}" data-r="${h}">${t}</a></li>`).join('')+`<li><a class="l" href="#login" data-r="login">Login</a></li><li><a class="btn" href="#register" style="padding:9px 16px">Create Account</a></li>`;
+document.getElementById('menu').innerHTML=M.map(([h,t,sub])=>sub?`<li class="dd"><a class="l" href="#services" data-r="services">${t} ▾</a><div>${sub.map(s=>`<a class="l" href="#${s}" data-r="${s}">${SV[s].t}</a>`).join('')}</div></li>`:`<li><a class="l" href="#${h}" data-r="${h}">${t}</a></li>`).join('');
 const OK={track:'This is a demo, so no live tracking data is available. No shipment information is shown.',quote:'Thanks! This demo form doesn’t send data anywhere yet. Connect it to your email or CRM to receive requests.',contact:'Thanks! This demo form doesn’t send data anywhere yet. Connect it to a form service or backend.',login:'Demo only: no authentication backend is connected, and nothing you typed was stored or sent.',register:'Demo only: no account was created, and nothing you typed was stored or sent.'};
 let io;
 function render(){const raw=location.hash.slice(1)||'home',T=/^track(-|$)/.test(raw),A=raw==='admin',k=T?'track':A?'admin':(R[raw]?raw:'home');
@@ -652,6 +652,7 @@ async function sendForm(f,m){m.hidden=false;
  catch(e){m.textContent='Sorry, we could not send your message. Please check your connection and try again.'}
  if(btn)btn.disabled=false}
 function lookup(f){const n=f.elements.n.value.trim();if(!n)return;window.PENDING=n;if(location.hash==='#track')render();else location.hash='track'}
+delete R.login;delete R.register;
 addEventListener('hashchange',render);render();
 document.getElementById('burger').onclick=()=>document.getElementById('nav').classList.toggle('open');
 document.getElementById('theme').onclick=e=>{e.preventDefault();const d=document.documentElement,dark=getComputedStyle(d).colorScheme==='dark';d.dataset.theme=dark?'light':'dark'};
